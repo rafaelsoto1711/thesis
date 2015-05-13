@@ -1,0 +1,6 @@
+*.cls
+*.ps
+*.bak
+README.md
+Makefile
+
