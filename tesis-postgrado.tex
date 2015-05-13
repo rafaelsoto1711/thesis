@@ -1,0 +1,92 @@
+\documentclass[logo,magister,openany]{tesis-postgrado}
+
+% % Declaración para colocar código Java
+%\usepackage{listings}
+%\usepackage{color}
+%
+%\definecolor{dkgreen}{rgb}{0,0.6,0}
+%\definecolor{gray}{rgb}{0.5,0.5,0.5}
+%\definecolor{mauve}{rgb}{0.58,0,0.82}
+%
+%\lstset{frame=tb,
+%  captionpos=b, 
+%  language=Java,
+%  numbers=left,
+%  aboveskip=3mm,
+
+%  belowskip=3mm,
+%  showstringspaces=false,
+%  columns=flexible,
+%  basicstyle={\small\ttfamily},
+%  %numbers=none,
+%  numberstyle=\tiny\color{gray},
+%  keywordstyle=\color{blue},
+%  commentstyle=\color{dkgreen},
+%  stringstyle=\color{mauve},
+%  breaklines=true,
+%  breakatwhitespace=true,
+%  tabsize=3
+%}
+
+\renewcommand{\lstlistingname}{C\'ODIGO}
+
+% % Pa usar quotes
+\usepackage{csquotes}
+\usepackage{rotating}
+\usepackage{floatrow}
+\usepackage{upquote}
+
+\keywords{information retrieval; search engines; wand algorithm}
+
+\begin{document}
+\baselineskip 23pt
+% ----------------------------------------------------------
+\thispagestyle{empty}
+\include{cubierta}
+\makecopyright
+% ----------------------------------------------------------
+\frontmatter
+
+\include{chapters/gracias}
+% % AGREGADO PARA IMPRIMIR EN DOBLE CARA
+\newpage\null\thispagestyle{empty}\newpage
+\include{chapters/dedicatoria}
+% % AGREGADO PARA IMPRIMIR EN DOBLE CARA
+\newpage\null\thispagestyle{empty}\newpage
+\include{chapters/abstract}
+\pagestyle{fancy}
+\fancyhead[L]{\slshape \leftmark}
+\fancyhead[C]{}
+\fancyhead[R]{\thepage}
+\pagenumbering{roman}
+\tableofcontents
+\listoffigures
+\listoftables
+% % AGREGADO PARA IMPRIMIR EN DOBLE CARA
+\newpage\null\thispagestyle{empty}\newpage
+\listofalgorithms
+% ----------------------------------------------------------
+\mainmatter
+\fancyhead[L]{\slshape \leftmark}
+\fancyhead[C]{}
+\pagenumbering{arabic}
+\hyphenation{de-di-ca-da a-no-ta-cio-nes re-sul-ta-dos fun-cio-na-les se-man-ti-ca}
+\include{chapters/1-intro}
+\include{chapters/2-marco-teorico}
+\include{chapters/3-wand}
+\include{chapters/4-prediccion}
+\include{chapters/5-scheduling}
+\include{chapters/6-evaluacionexperimental}
+\include{chapters/7-conclusiones}
+% ----------------------------------------------------------
+\bibliographystyle{apa-good}
+\bibliography{referencias}
+% ----------------------------------------------------------
+% NO TIENE APENDICES
+\appendix
+\addappheadtotoc 
+% ----------------------------------------------------------
+\include{chapters/ApendiceA}
+\include{chapters/ApendiceB}
+%\include{chapters/ApendiceC}
+\end{document}
